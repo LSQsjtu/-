@@ -1,0 +1,61 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             |.text|, CODE, READONLY
+    2 00000000         
+    3 00000000                 EXPORT           Sum         ; ÉùÃ÷×Ó³ÌÐò¿É±»Íâ²
+                                                            ¿ÒýÓÃ
+    4 00000000         Sum
+    5 00000000 F04F 0100       MOV              R1, #0      ; ³õÊ¼»¯ÔËËã½á¹ûµÄÖ
+                                                            µ£¬²ÎÊýÔÚR0ÖÐ
+    6 00000004         loop
+    7 00000004 4401            ADD              R1, R0      ; R1=R1+R0 
+    8 00000006 3801            SUBS             R0, #1      ; R0=R0-1£¬²¢ÇÒ¸ù¾Ý
+                                                            ½á¹û¸üÐÂ±êÖ¾ 
+    9 00000008 D1FC            BNE              loop        ; if (R0¡Ù0) ×ª loo
+                                                            p; 
+   10 0000000A 4608            MOV              R0, R1      ; ÔËËã½á¹ûËÍR0
+   11 0000000C 47F0            BLX              LR          ; ·µ»Ø
+   12 0000000E         
+   13 0000000E                 END
+Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4.fp --apcs=int
+erwork --depend=.\objects\sum.d -o.\objects\sum.o -ID:\ÉÏº£½»Í¨´óÑ§\´ó¶þÏÂ\Ç¶Èë
+Ê½\EXP1\RTE\_Target_1 -ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include -ID:\
+Keil_v5\ARM\PACK\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C129 --predefine="__EVAL
+ SETA 1" --predefine="__UVISION_VERSION SETA 522" --predefine="_RTE_ SETA 1" --
+predefine="TM4C1294NCPDT SETA 1" --list=.\listings\sum.lst sum.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+.text 00000000
+
+Symbol: .text
+   Definitions
+      At line 1 in file sum.s
+   Uses
+      None
+Comment: .text unused
+Sum 00000000
+
+Symbol: Sum
+   Definitions
+      At line 4 in file sum.s
+   Uses
+      At line 3 in file sum.s
+Comment: Sum used once
+loop 00000004
+
+Symbol: loop
+   Definitions
+      At line 6 in file sum.s
+   Uses
+      At line 9 in file sum.s
+Comment: loop used once
+3 symbols
+338 symbols in table

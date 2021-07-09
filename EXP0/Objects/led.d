@@ -1,0 +1,9 @@
+.\objects\led.o: led.c
+.\objects\led.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\led.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\led.o: .\inc\hw_memmap.h
+.\objects\led.o: .\driverlib\debug.h
+.\objects\led.o: .\driverlib\gpio.h
+.\objects\led.o: .\inc\hw_types.h
+.\objects\led.o: .\driverlib\pin_map.h
+.\objects\led.o: .\driverlib\sysctl.h
